@@ -42,7 +42,8 @@
 
         <%= book_comment.user.name %>
         <%= book_comment.comment %>
-        <%= link_to 'Destroy', book_book_comments_path(@book,book_comment.id), method: :delete, class: "btn btn-sm btn-danger" %><br>
+        <% if book_comment.user == current_user %>
+         <%= link_to 'Destroy', book_book_comments_path(@book,book_comment.id), method: :delete, class: "btn btn-sm btn-danger" %><% end %><br>
         <% end %>
       </div>
       <div>
