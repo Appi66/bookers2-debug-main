@@ -6,10 +6,10 @@ $(document).on('turbolinks:load', function() {
     size: 20,
     starOff:  '<%= asset_path('star-off.png') %>',
     starOn : '<%= asset_path('star-on.png') %>',
-    starHalf: '<%= asset_path('star-half.png') %>',
-    half: true,
+
+    half: false,
     readOnly: true,
-    score: <%= book.rate %>,
+    score: <%= book.star %>,
   });
 });
 </script>

@@ -5,27 +5,23 @@
 //= require jquery
 //= require ./jquery.raty.js
 
+//
+
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-import "jquery"
+import jQuery from "jquery"
+import raty from 'raty-js'
 import "popper.js"
 import "bootstrap"
+
 import '@fortawesome/fontawesome-free/js/all';
 import "../stylesheets/application"
-
-require("@rails/ujs").start()
-// require("turbolinks").start()
-require("@rails/activestorage").start()
-require("channels")
-
-require("jquery")
-
-window.$ = window.jQuery = require('jquery');
-require('./jquery.raty')
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
+global.$ = jQuery;
+window.$ = jQuery;
