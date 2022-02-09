@@ -11,7 +11,7 @@ class BooksController < ApplicationController
 
   def index
     @books = Book.all
-    @books = Book.all.order(created_at: :desc)
+    @books = Book.all.order(params[:sort])
     @book = Book.new
   end
 
